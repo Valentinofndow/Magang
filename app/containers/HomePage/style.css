@@ -1,0 +1,257 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: #000;
+  overflow: hidden;
+  color: white;
+}
+
+/* Wrapper utama */
+.login-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 20% 50%, #0a0a0a, #000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 10vw;
+}
+
+/* Kiri: teks perusahaan */
+.left-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.company-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.3;
+  color: #fff;
+}
+
+/* Kanan: form login */
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px 45px;
+  border-radius: 20px;
+  width: 360px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field:focus {
+  border-color: #fff;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #222, #000);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(145deg, #333, #111);
+  transform: scale(1.02);
+}
+
+.forgot-text {
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.forgot-text:hover {
+  color: white;
+}
+
+.divider {
+  margin: 25px 0;
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signup-text a, .signup-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-text a:hover, .signup-link:hover {
+  text-decoration: underline;
+}
+
+/* ==== Modal Sign Up - DARK MODE ==== */
+.signup-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.signup-card {
+  position: relative;
+  background: #1e1e1e;
+  color: #f2f2f2;
+  border-radius: 15px;
+  padding: 35px 45px;
+  width: 400px;
+  z-index: 10;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.3s ease forwards;
+}
+
+.signup-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.signup-card label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #d0d0d0;
+}
+
+.signup-card .input-field {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+  border: 1px solid #666;
+  border-radius: 25px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.signup-card .input-field:focus {
+  border-color: #fff;
+}
+
+.signup-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.signup-btn:hover {
+  background: #333;
+  transform: scale(1.02);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsif */
+@media (max-width: 900px) {
+  .login-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+  }
+
+  .left-side {
+    margin-bottom: 40px;
+  }
+
+  .company-name {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
